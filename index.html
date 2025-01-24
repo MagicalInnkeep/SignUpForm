@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css">
-    <script src="clientside.js"></script>
-    <link rel="preload" href="Mononoki.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
     <div class="mainContainer">
@@ -23,22 +21,42 @@
                     <p>You want to login don't you? </p>
                     <p>Well, there's nothing here</p>
                 </div>
-                <form>
+                <form action="\signup" method="post" class="loginForm">
                     <legend>But, sure! Go ahead!</legend>
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required></input>
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" required></input>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required></input>
-                    <label for="phoneNo">Phone:</label>
-                    <input type="text" id="phoneNo" name="phoneNo" required></input>
-                    <label for="psw1">Password:</label>
-                    <input type="password" id="psw1" name="psw1" required></input>
-                    <label for="psw2">Confirm Password:</label>
-                    <input type="password" id="psw2" name="psw2" required></input>
+                    <div class="questionContainer">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                    </div>
+                    <div class="questionContainer">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                    </div>
+                    <div class="questionContainer">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="John.Doe@mail.com" required>
+                    </div>
+                    <div class="questionContainer">
+                        <label for="phoneNo">Phone:</label>
+                        <input 
+                                type="text" 
+                                id="phoneNo" 
+                                name="phoneNo" 
+                                placeholder="+01 123 123 456" 
+                                pattern="^\+?[0-9]{1,3}?[\-\. ]?\(?[0-9]{3}\)?[\-\. ]?[0-9]{3}[\-\. ]?[0-9]{3,6}$" 
+                                title="PhoneNo: (+123) 123 123 123. spaces can be replaced by - or ."
+                                required>
+                    </div>
+                    <div class="questionContainer">
+                        <label for="psw1">Password:</label>
+                        <input type="password" id="psw1" name="psw1" placeholder="" minlength=8 required>
+                    </div>
+                    <div class="questionContainer">
+                        <label for="psw2">Confirm Password:</label>
+                        <input type="password" id="psw2" name="psw2" placeholder="" minlength="8" required>
+                    </div>
+                    <button type="submit">Create Account</button>
                 </form>
-                <button type="submit">Create Account</button>
+                
                 <p>Already have an account? <a href="index.html">Log in</a></p>
             </div>
         </div>

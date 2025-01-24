@@ -5,3 +5,62 @@
     src: local('Mononoki Regular'), local('Mononoki-Regular'), url(fonts/MononokiNerdFontPropo-Regular.woff2) format('woff2');
     font-display: swap;
   }
+
+:root{
+    --glob-font-family: 'Mononoki','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+    --glob-colour-light: whitesmoke; 
+    --glob-colour-dark: rgb(49, 36, 29);  
+}  
+
+html{
+    background-image: url(images/BackGroundImg.avif);
+
+}
+
+.mainContainer{
+    display: flex;
+}
+
+.leftSide{
+    flex: 1;
+    font-family: var(--glob-font-family);
+    color: var(--glob-colour-light);
+}
+
+.rightSide{
+    flex: 2;
+    min-width: 300px;
+    max-width: 600px;
+    width: 100%;
+    background-color: var(--glob-colour-dark);
+    opacity: 60%;
+    font-family: var(--glob-font-family);
+    color: var(--glob-colour-light);
+    align-content: stretch;
+    display: flex;
+    padding: 15px;
+}
+
+.logobanner{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logobanner>img{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+.logobanner>p{
+    text-align: center;
+    margin: 0;
+}
+
+.referrer{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: smaller;
+}
